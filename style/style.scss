@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+$font: "Josefin Sans", sans-serif;
+
+//Colors
+
+//Primary
+
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+
+//Neutral
+
+$DarkGrayishRed: hsl(0, 6%, 24%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: 16px;
+}
+.container {
+    display: flex;
+}
+
+.img {
+    height: 100vh;
+    width: 40%;
+    background: url("../images/hero-desktop.jpg");
+    z-index: 1;
+}
+.container-text {
+    background: url("../images/bg-pattern-desktop.svg") center/cover;
+
+    height: 100vh;
+    width: 60%;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        margin-left: 200px;
+        .h {
+            color: $DesaturatedRed;
+            font-weight: 300;
+        }
+    }
+    p {
+        color: $DesaturatedRed;
+        width: 50%;
+        font-size: 1em;
+        line-height: 1.7;
+        margin: 50px 0px 50px 200px;
+    }
+}
+h1 {
+    font-size: 4rem;
+    font-family: $font;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: $DarkGrayishRed;
+}
+
+input {
+    margin-left: 200px;
+    width: 45%;
+    height: 50px;
+    // border-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background: transparent;
+    padding-left: 30px;
+    border: $DesaturatedRed solid 1px;
+}
+
+.search-bar {
+    display: flex;
+    input::placeholder {
+        font-family: $font;
+        font-weight: bold;
+        color: $DesaturatedRed;
+    }
+    input:focus {
+        outline: none;
+    }
+    button {
+        width: 100px;
+        border: none;
+        height: 50px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #ee8c8c -9.17%, #f7bfbf 100%);
+        position: relative;
+        left: -50px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .img {
+        height: 250px;
+        width: 100%;
+        background: url("../images/hero-mobile.jpg");
+        z-index: 0;
+        margin-top: 120px;
+    }
+
+    .container-text {
+        background: url("../images/bg-pattern-desktop.svg") center/cover;
+
+        height: auto;
+        width: 100%;
+        font-family: $font;
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: center;
+
+        h1 {
+            margin-left: 0px;
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 70px;
+            .h {
+                color: $DesaturatedRed;
+                font-weight: 300;
+            }
+        }
+        p {
+            color: $DesaturatedRed;
+            width: 85%;
+
+            line-height: 1.7;
+            margin: 20px 0px 30px 0px;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    .logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        margin-left: 0px;
+        img {
+            width: 150px;
+        }
+    }
+
+    input {
+        margin-left: 50px;
+        width: 250px;
+        height: 50px;
+        // border-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        background: transparent;
+        padding-left: 30px;
+        border: $DesaturatedRed solid 1px;
+    }
+    .search-bar {
+        display: flex;
+        margin-bottom: 50px;
+        input::placeholder {
+            font-family: $font;
+            font-weight: bold;
+            color: $DesaturatedRed;
+        }
+        input:focus {
+            outline: none;
+        }
+        button {
+            width: 70px;
+            border: none;
+            height: 50px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #ee8c8c -9.17%, #f7bfbf 100%);
+            position: relative;
+            left: -50px;
+        }
+    }
+}
